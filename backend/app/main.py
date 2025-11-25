@@ -64,6 +64,10 @@ def custom_openapi():
 app.openapi = custom_openapi
 
 # include routers
+@app.get("/")
+def root():
+    return {"status": "backend running", "service": "AI Doc Authoring"}
+
 app.include_router(auth_router)      # /auth/*
 app.include_router(project_router)   # /projects/*
 
