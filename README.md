@@ -31,4 +31,45 @@ business documents (DOCX/PPTX) using LLMs, refine them, and export final version
 
 ## 🔧 Environment Variables
 Create a `.env` file in the **backend** folder with:
+GEMINI_API_KEY=your_api_key_here
+SECRET_KEY=your_fastapi_secret
+DATABASE_URL=sqlite:///./app.db
+LLM_PROVIDER=gemini
+
+
+## ▶️ Run Locally
+
+### Backend
+cd backend
+uvicorn app.main:app --reload
+
+
+### Frontend
+cd frontend
+npm install
+npm run dev
+
+
+## 📦 Exporting Files
+Click **Export .docx** or **Export .pptx** on the Project Page.
+
+## 📽 Demo Video Requirements (As per assignment)
+Your demo must show:
+- Register + Login
+- Create Word project
+- Create PPT project
+- AI generation
+- Refinement
+- Likes/Dislikes
+- Version history
+- Export DOCX/PPTX
+
+## 📁 Project Structure
+ai-doc-authoring/
+backend/
+frontend/
+
+## 👩‍💻 Author
+**Sahejpreet Kaur**
+
 
