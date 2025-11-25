@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------ GLOBAL NEON BACKGROUND -------------- */
+:root {
+  --bg-dark: #06070d;
+  --bg-gradient-1: rgba(0, 200, 255, 0.18);
+  --bg-gradient-2: rgba(180, 0, 255, 0.15);
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(800px 600px at 20% 20%, var(--bg-gradient-1), transparent),
+    radial-gradient(900px 700px at 80% 80%, var(--bg-gradient-2), transparent),
+    var(--bg-dark);
+  background-color: var(--bg-dark);
+  color: #e6eef8;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Remove the problematic flex code here! */
+
+/* PAGE LAYOUT */
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Glass Card */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+/* Neon Button */
+.btn-neon {
+  background: linear-gradient(90deg, #00d2ff 0%, #7a5cff 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(0, 210, 255, 0.6);
+}
+
+/* GLOBAL PAGE WRAPPER FIX */
+.page-wrapper {
+  padding: 40px 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Allow all pages to have a centered content area */
+.page {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+/* Make all cards smooth & glossy */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+.cyber-btn {
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #00eaff 0%,
+    #3b82f6 35%,
+    #7b2ff7 70%,
+    #b026ff 100%
+  );
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.45),
+              0 0 25px rgba(130, 50, 255, 0.4);
+  transition: 0.3s ease;
+}
+
+.cyber-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 220, 255, 0.65),
+              0 0 40px rgba(160, 60, 255, 0.6);
+}
+
+.cyber-btn:active {
+  transform: scale(0.95);
+}
