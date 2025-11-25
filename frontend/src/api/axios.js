@@ -1,7 +1,7 @@
 // frontend/src/api/axios.js
 import axios from "axios";
 
-const base = import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000";
+const base = import.meta.env.VITE_API_BASE || "https://ai-doc-authoring.onrender.com";
 
 const api = axios.create({
   baseURL: base,
